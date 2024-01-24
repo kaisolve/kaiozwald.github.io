@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:kaiozwald/classes/navitem.dart';
+import 'package:kaiozwald/screens/about.dart';
+import 'package:kaiozwald/screens/contact.dart';
+import 'package:kaiozwald/screens/newsletter.dart';
+import 'package:kaiozwald/screens/now.dart';
+import 'package:kaiozwald/screens/posts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,18 +18,17 @@ class HomePage extends StatelessWidget {
           children: [
             Row(
               children: [
-                NavItem(text: 'Home', onTap: () => navigateToHome()),
+                NavItem(text: 'Home', onTap: () => HomePage()),
                 const SizedBox(width: 16),
-                NavItem(text: 'About', onTap: () => navigateToAbout()),
+                NavItem(text: 'About', onTap: () => AboutPage()),
                 const SizedBox(width: 16),
-                NavItem(text: 'Contact', onTap: () => navigateToContact()),
+                NavItem(text: 'Contact', onTap: () => ContactPage()),
                 const SizedBox(width: 16),
-                NavItem(
-                    text: 'Newsletter', onTap: () => navigateToNewsletter()),
+                NavItem(text: 'Newsletter', onTap: () => NewsletterPage()),
                 const SizedBox(width: 16),
-                NavItem(text: 'Now', onTap: () => navigateToNow()),
+                NavItem(text: 'Now', onTap: () => NowPage()),
                 const SizedBox(width: 16),
-                NavItem(text: 'Posts', onTap: () => navigateToPosts()),
+                NavItem(text: 'Posts', onTap: () => PostsPage()),
               ],
             ),
             Row(
@@ -56,30 +60,5 @@ class HomePage extends StatelessWidget {
         child: Text('Your main content goes here'),
       ),
     );
-  }
-
-  // Add your navigation functions here
-  void navigateToHome() {
-    // Navigate to Home page
-  }
-
-  void navigateToAbout() {
-    // Navigate to About page
-  }
-
-  void navigateToContact() {
-    // Navigate to Contact page
-  }
-
-  void navigateToNewsletter() {
-    // Navigate to Newsletter page
-  }
-
-  void navigateToNow() {
-    // Navigate to Now page
-  }
-
-  void navigateToPosts() {
-    // Navigate to Posts page
   }
 }
